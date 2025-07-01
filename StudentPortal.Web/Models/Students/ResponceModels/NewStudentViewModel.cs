@@ -14,8 +14,8 @@ namespace StudentPortal.Web.Models.Students.DTOs
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Phone is not specified")]
-        [Phone(ErrorMessage = "Phone type must be like +380973695812")]
-        [RegularExpression(@"^((\+380)+([0-9]){9})$", ErrorMessage ="Phone type must be like +380973695812")]
+        [Phone(ErrorMessage = "Phone type must be like +919876543210")]
+        [RegularExpression(@"^\+91[0-9]{10}$", ErrorMessage ="Phone type must be like +919876543210")]
         public string Phone { get; set; }
         public bool Subscribed { get; set; }
     }
